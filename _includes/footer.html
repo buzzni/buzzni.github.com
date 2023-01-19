@@ -1,0 +1,29 @@
+{% if site.theme_settings.footer_text %}
+<footer class="site-footer">
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                {% include icons.html %}
+                </ul>
+            </div>
+    <p class="copyright">{{ site.theme_settings.footer_text }}</p>
+    
+    <div class="banner_wrap">
+        <button class="btn_close" onclick="closeBanner()">+</button>
+        <a href="https://recruit.buzzni.com?from=boiler_banner" target="_blank">
+            <img class="desktop" src="{{ site.baseurl }}/assets/img/banner/recruit_banner.png" alt="">
+            <img class="mobile" src="{{ site.baseurl }}/assets/img/banner/recruit_banner_mobile.png" alt="">
+
+        </a>
+    </div>
+
+    <script>
+        function closeBanner(){
+            $('.banner_wrap').hide();
+        }
+    </script>
+
+</footer>
+{% endif %}
+
+

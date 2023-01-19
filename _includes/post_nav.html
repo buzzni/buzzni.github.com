@@ -1,0 +1,47 @@
+<div id="post-nav">
+  <div>
+    {% if page.previous.url %}
+    <div id="previous-post" class="post-nav-post ">
+      <!-- <p>{{ site.theme_settings.str_previous_post }}</p> -->
+      <a class="post-link post-link-btn" href="{{ site.baseurl }}{{ page.previous.url }}">
+        <!-- {{ page.previous.title }} -->
+        이전
+      </a>
+    </div>
+    {% endif %}
+    {% if page.next.url %}
+    <div id="next-post" class="post-nav-post">
+      <!-- <p>{{ site.theme_settings.str_next_post }}</p> -->
+      <a class="post-link post-link-btn" href="{{ site.baseurl }}{{ page.next.url }}">
+        <!-- {{ page.next.title }} -->
+        다음
+      </a>
+    </div>
+
+    {% endif %}
+  </div>
+
+  <div id="back-post" class="post-nav-post">
+    <p>
+      <a href="/" class="back-menu post-link-btn">
+        <i class="fa fa-arrow-up"></i> 목록으로
+      </a>
+    </p>
+  </div>
+
+
+</div>
+
+<div class="recruit_box">
+  <img src="{{site.baseurl}}/assets/img/runner.png"
+    style="width:20%; max-width:100px; height:auto; padding:0; margin-right:16px;" alt="">
+  <div>
+    <h2>우리와 함께 달려요!</h2>
+    <p>
+      버즈니와 함께 성장의 즐거움 문화를 만들어갈 인재를 찾고 있습니다. <br>
+      자세한 내용은 채용공고를 확인해주세요!
+    </p>
+    <a class="btn_recruit" href="https://recruit.buzzni.com?from=boiler&auth={{page.author}}&ct={{page.type}} "
+      target="_blank">버즈니 채용공고</a>
+  </div>
+</div>

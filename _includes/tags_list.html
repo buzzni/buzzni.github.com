@@ -1,0 +1,14 @@
+{% assign tags = include.tags | split:'|' | sort | uniq %}
+
+{% if include.tags.size > 0 %}
+    <div class="tag-wrap">
+        <div class="tag-list">                  
+        {% for tag in tags %}
+          <a class="button" href="{{site.baseurl}}/tags#{{tag}}">
+            <!-- <p><i class="fa fa-tag fa-fw"></i> {{ tag }}</p> -->
+            # {{ tag }}
+          </a>
+        {% endfor %}
+        </div>
+    </div>
+  {% endif %}

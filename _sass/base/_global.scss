@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+
+    img{
+        border-radius: 4px;
+        padding:8px;
+        box-shadow: 0 1px 8px #e9e9e9;
+        margin: 35px auto 18px !important
+    }
+}
+
+figcaption{
+    text-align: center;
+    font-size:12px;
+}
+
+// For correct line number width in Github Gists
+.gist table tbody tr td {
+    box-sizing: content-box;
+}
+
+html {
+    background: $background-color;
+}
+
+// Typography
+::selection {
+    background: $selection-color;
+}
+
+::-moz-selection {
+    background: $selection-color;
+}
+
+body {
+    color: $text-color;
+    font-family: $font-family-main;
+    font-size: $font-size;
+    word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-headings;
+    line-height: 1.3;
+    margin: 0.67em 0;
+    a {
+        color: $text-color;
+    }
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 0.85em;
+}
+h6 {
+    margin: 10px 0;
+    padding-top: 5px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 300;    
+    text-align: center;
+    font-style: italic;
+    margin-top: -25px;
+}
+
+blockquote {
+    border-left: 2px solid darken($blockquote-color, 20%);
+    margin: 1em 1em;
+    padding: 0.75em 1em;
+    background-color: $blockquote-color;
+    box-shadow: 0 2px 2px $border-color;
+}
+
+blockquote p:last-child,
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+    @media (max-width: 1100px) {
+        overflow-x: scroll;
+        display: inline-block;
+    }
+}
+
+td,
+th {
+    padding: 0.5em 1em;
+    border: 1px solid $border-color;
+    text-align: left;
+}
+
+table,
+dl,
+code,
+kbd,
+pre,
+samp {
+    margin: 1em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 2em;
+}
+
+p,
+ol,
+ul,
+dl,
+.math-display {
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+// KaTeX math display
+.math-display {
+    display: inline-block;
+    width: 100%;
+}
+
+// Lists within lists
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 1em;
+}
+
+ol,
+ul {
+    list-style-position: inside;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid #fff;
+    margin: 1em 0;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+
+iframe,
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+    padding: 0 10%;
+}
+
+img[align=left] {
+    margin-right: 3%;
+}
+
+img[align=right] {
+    margin-left: 3%;
+}
+
+.code_wrap{
+    background: #333;
+    border-radius: 12px;
+    padding:8px 16px;
+    margin:16px auto;
+
+    code{
+        color:#fff;
+    }
+}
+
+
+.banner_wrap{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141518;
+    position: fixed;
+    left:0;
+    bottom:0;
+
+    .btn_close{
+        position: absolute;
+        right:0px;
+        top:0px;
+        width:24px;
+        height:24px;
+        border-radius: 50em;
+        background: transparent;
+        border:0;
+        line-height: 0;
+        padding: 0;
+        font-size: 20px;
+        color: #fff;
+        outline-style: none;
+        transform: rotate(45deg);
+        transition: .3s;
+        
+        &:hover{
+
+            color:#ffdc32;
+        }
+    }
+    
+    a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height:48px;
+            max-width: inherit;
+            padding:0;
+
+
+
+            &.mobile{
+                display: none;
+            }
+        }
+    }
+}
+/* ---- Responsive ---- */
+
+@media screen and (max-width: $sm-break) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    h4 {
+        font-size: 0.75em;
+    }
+    p,
+    li,
+    code {
+        font-size: 0.75em;
+    }
+
+    .banner_wrap{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #141518;
+        position: fixed;
+        left:0;
+        bottom:0;
+
+        a{
+            img{
+    
+                &.mobile{
+                    display: block;
+                    height:80px;
+                }
+    
+                &.desktop{
+                    display: none;
+                }
+            }
+
+        }
+        
+    }
+}
